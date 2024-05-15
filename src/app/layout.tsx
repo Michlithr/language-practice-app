@@ -1,14 +1,10 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "./global-icons.css"
+import "./global-icons.css";
+import Header from "@ui/header";
+import Footer from "@ui/footer";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Language practice",
-  description: "This app allows to configuring your own flashcards for practicing japanese.",
-};
 
 export default function RootLayout({
   children,
@@ -16,8 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <div
+      className={inter.className + "flex flex-col min-h-screen min-w-screen"}
+    >
+      <Header />
+      <main className="min-w-full flex-grow bg-white">{children}</main>
+      <Footer />
+    </div>
   );
 }
