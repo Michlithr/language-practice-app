@@ -1,4 +1,5 @@
 import Header from "@ui/header";
+import Footer from "@ui/footer";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <p>Content</p>
       </main>
       <footer className="flex justify-center items-center min-w-full h-16 bg-lapis-lazuli text-white font-bold">
-        <p>Footer</p>
+        <Footer />
       </footer>
     </div>
   );
