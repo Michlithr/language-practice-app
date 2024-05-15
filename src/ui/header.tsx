@@ -1,11 +1,8 @@
 import Link from "next/link";
+import { capitalizeFirstLetter } from "@lib/string-capitalize";
 
 export default function Header() {
   const subpagesNames = ["kanji", "vocabulary", "grammar"];
-
-  const capitalizeFirstLetter = (str: string): string => {
-    return [...str][0].toUpperCase() + str.slice(1);
-  };
 
   return (
     <div className="flex justify-between items-center min-w-full h-24 px-40 bg-lapis-lazuli text-white font-bold">
